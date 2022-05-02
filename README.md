@@ -639,13 +639,16 @@ class ElasticHook(BaseHook):
 - elasticsearch connection index에 저장하는 Operator를 생성한다. 
 ```
 > cd airflow
-> tree plugins 
+> tree .
+dags/
+└── elasticsearch_dag.py           # <-- DAG 파일 생성
 plugins/
 └── elasticsearch_plugin
     ├── hooks
-    │   └── elastic_hook.py
+    │   └── elastic_hook.py        # <-- Hook 파일 생성 
     └── operators
         └── postgres_to_elastic.py # <-- Operator 파일 생성 
+```
 ```
 
 #### Airflow Web UI에서 postgreSQL connection 생성
